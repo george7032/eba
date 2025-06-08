@@ -8,28 +8,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const form = document.getElementById('contact-form');
-const thankYou = document.getElementById('thank-you');
-
-form.addEventListener('submit', function(e) {
+document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const form = e.target;
   const formData = new FormData(form);
+  const status = document.getElementById("form-status");
 
   fetch(form.action, {
-    method: 'POST',
+    method: form.method,
     body: formData,
     headers: {
       'Accept': 'application/json'
     }
   }).then(response => {
     if (response.ok) {
+      status.textContent = "Thank you! Your message has been sent.";
+      status.style.color = "green";
       form.reset();
-      thankYou.style.display = 'block';
     } else {
-      alert('Oops! Something went wrong. Please try again.');
+      response.json().then(data => {
+        status.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : "Something went wrong.";
+        status.style.color = "red";
+      });
     }
-  }).catch(error => {
-    alert('Oops! Something went wrong. Please try again.');
+  }).catch(() => {
+    status.textContent = "Oops! There was a problem.";
+    status.style.color = "red";
   });
 });
+
+

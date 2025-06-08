@@ -1,69 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact & Map Side by Side</title>
-<link rel="stylesheet" href="css/styles.css">
-<style>
-  .contact-map-wrapper {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: nowrap;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Embakasi Benedicta Academy - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/scripts.js"></script>
+  <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="images/logowhite.jfif" type="image/png">
+  <link
+  rel="stylesheet"  integrity="sha512-yH2UO5uGpD5Q+oUepAZWvY5r6KqE0L4Y0vUwUlwA0IfHoYB64R3ovlLaLlVXcWDeu8tfR3vSe7Q2V6RtV7Op5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  .map-section,
-  .section.contact {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .map-container iframe {
-    width: 50%;
-    height: 200%;
-    border: 0;
-    min-height: 400px;
-  }
-
-  form.contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-  }
-
-  form.contact-form label {
-    margin-top: 1rem;
-  }
-
-  form.contact-form input,
-  form.contact-form textarea {
-    margin-top: 0.25rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  form.contact-form button {
-    margin-top: 1.5rem;
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    background-color: #004080;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 900px) {
-    .contact-map-wrapper {
-      flex-direction: column;
-    }
-  }
-</style>
 </head>
 <body>
-  
+
+
   <header>
     <!-- Top contact and social links -->
     <div class="header-top">
@@ -104,88 +55,95 @@
     </div>
   </header>
   
-  <section class="section contact-info">
-    <h2>Contact Us</h2>
-    <p>Address: Utawala, Nairobi, Kenya</p>
-    <p>Phone: +254 712 345 678</p>
-    <p>Email: <a href="mailto:info@embakasibenedicta.ac.ke">info@embakasibenedicta.ac.ke</a></p>
-    <p>Office Hours: Monday - Friday, 8 AM - 5 PM</p>
-  </section>
+
   
-  <div class="contact-map-wrapper">
-    <section class="map-section">
-      <h2>Our Location</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=..."
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
-  
-    <section class="section contact-form-section">
-      <h3>Send us a Message</h3>
-      <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your full name" />
-  
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" required placeholder="you@example.com" />
-  
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required placeholder="Subject of your message" />
-  
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required placeholder="e.g. +254 712 345 678" />
-  
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
-  
-        <button type="submit">Send Message</button>
-      </form>
-      <p id="thank-you" style="display:none; color: green; margin-top: 1rem;">
-        Thank you for your message! We'll get back to you shortly.
-      </p>
-    </section>
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-details">
+  <h2>Contact Us</h2>
+  <p><strong>Phone 1:</strong> +254 700 123456</p>
+  <p><strong>Phone 2:</strong> +254 732 625092</p>
+  <p><strong>Email:</strong> <a href="mailto:kimani7032@gmail.com">kimani7032@gmail.com</a></p>
+
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
   </div>
-  
-<footer class="footer">
-  <div class="footer-container">
-  
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="amusement.html">Amusement Park</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+</div>
+
+  <div class="contact-wrapper">
+    
+    <!-- Google Map -->
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9737450734216!2d36.965260715258756!3d-1.2786901987826237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6ca7a692ff57%3A0x816b27946e67a493!2sEmbakasi%20Benedicta%20Academy!5e0!3m2!1sen!2ske!4v1685912345678!5m2!1sen!2ske"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <div class="footer-section">
-      <h3>Contact Info</h3>
-      <p>Utawala, Nairobi, Kenya</p>
-      <p>Phone: +254 712 345 678</p>
-      <p>Email: info@embakasibenedicta.ac.ke</p>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="5" placeholder="Your Comment..." required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="form-status"></p>
+      </form>
     </div>
-    <div class="footer-section social">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://facebook.com/EmbakasiBenedictaAcademy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/EmbakasiBenedicta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/EmbakasiBenedicta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/company/embakasibenedicta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+  </div>
+</section>
+
+<a
+  href="https://wa.me/254732625092"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+  <footer class="footer">
+    <div class="footer-container">
+    
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="amusement.html">Amusement Park</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
       <div class="footer-section">
-          <h3>Embakasi Benedicta Academy</h3>
-          <p>&copy; 2025 Embakasi Benedicta Academy. All rights reserved.</p>
+        <h3>Contact Info</h3>
+        <p>Utawala, Nairobi, Kenya</p>
+        <p>Phone: +254 712 345 678</p>
+        <p>Email: info@embakasibenedicta.ac.ke</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com/EmbakasiBenedictaAcademy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/EmbakasiBenedicta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/EmbakasiBenedicta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/embakasibenedicta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
+        <div class="footer-section">
+            <h3>Embakasi Benedicta Academy</h3>
+            <p>&copy; 2025 Embakasi Benedicta Academy. All rights reserved.</p>
+          </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+<script src="js/scripts.js"></script>
+
 </body>
 </html>
