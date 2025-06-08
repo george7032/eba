@@ -58,7 +58,7 @@ goToSlide(0);
 
 
 
-<script>
+
   document.querySelectorAll('.attraction-card').forEach(card => {
     const track = card.querySelector('.carousel-track');
     const imagesCount = track.children.length;
@@ -83,6 +83,6 @@ goToSlide(0);
     card.addEventListener('mouseenter', startSliding);
     card.addEventListener('mouseleave', stopSliding);
   });
-</script>
+
 
 

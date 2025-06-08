@@ -9,7 +9,162 @@
   <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" href="images/logowhite.jfif" type="image/png">
 
+<style>
+ /* General Layout */
+/* General Section Styling */
+/* Base Styles */
+.admissions-main {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f8f9fc, #ffffff);
+  color: #333;
+  padding: 4rem 1.5rem;
+  max-width: 1300px;
+  margin: auto;
+  line-height: 1.8;
+}
 
+/* Headings */
+.admissions-main h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.admissions-main h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #d43f52;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.admissions-main h3 {
+  font-size: 1.75rem;
+  color: #457b9d;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Paragraphs & Lists */
+.admissions-main p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.admissions-main ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admissions-main ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  list-style: disc;
+  color: #555;
+}
+
+/* Highlight Cards */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.highlight-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1f1f1;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card h4 {
+  font-size: 1.3rem;
+  color: #d43f52;
+  margin-bottom: 0.75rem;
+}
+
+/* CTA Button */
+.apply-cta {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.apply-cta a {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #d43f52;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 63, 82, 0.3);
+}
+
+.apply-cta a:hover {
+  background-color: #b92d42;
+}
+
+/* Fees Table */
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 3rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.fees-table th,
+.fees-table td {
+  padding: 1.25rem;
+  border: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.fees-table th {
+  background-color: #1d3557;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .admissions-main h2 {
+    font-size: 2rem;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+
+  .apply-cta a {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+
+</style>
 </head>
 <body>
 
@@ -46,7 +201,6 @@
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
           <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="amusement.html">Amusement Park</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -54,18 +208,98 @@
     </div>
   </header>
   
-
-
-  <section class="section">
-    <h2>Admissions Information</h2>
-    <p>We warmly welcome applications for both day and boarding students at Embakasi Benedicta Academy.</p>
-    <ul>
-      <li>Application forms available at the school office or online</li>
-      <li>Entrance assessment for new students</li>
-      <li>Fees payment plans and scholarships available</li>
-      <li>Contact the admissions office for detailed inquiries</li>
-    </ul>
-  </section>
+  <main class="admissions-main">
+    <section class="section">
+      <h2>Welcome to Our Admissions Page</h2>
+      <p>We are excited to welcome new students and families to Embakasi Benedicta Academy, located in the heart of Utawala. Our admissions process is designed to be transparent, inclusive, and student-friendly.</p>
+    </section>
+  
+    <section class="section admission-box">
+      <h3>Why Choose Embakasi Benedicta Academy?</h3>
+      <ul>
+        <li>Competent, caring, and qualified teaching staff</li>
+        <li>Modern facilities including labs, library, and ICT center</li>
+        <li>Co-curricular activities: drama, music, and sports</li>
+        <li>Value-based education rooted in Christian principles</li>
+        <li>Excellent KCPE performance record</li>
+      </ul>
+    </section>
+  
+    <section class="section admission-box">
+      <h3>Admission Requirements</h3>
+      <ul>
+        <li>Copy of birth certificate</li>
+        <li>2 recent passport-size photos</li>
+        <li>Previous term report (for transfer students)</li>
+        <li>Filled admission form (available in the office or online)</li>
+        <li>Application fee (if applicable)</li>
+      </ul>
+    </section>
+  
+    <section class="section admission-box">
+      <h3>Classes Offered</h3>
+      <ul>
+        <li>Playgroup (3 years and above)</li>
+        <li>Pre-primary 1 & 2 (PP1 & PP2)</li>
+        <li>Grades 1 to 6 (CBC)</li>
+        <li>Junior Secondary (Grades 7-9)</li>
+        <li>Upper Primary (Class 5-8 under 8-4-4)</li>
+      </ul>
+    </section>
+    <section class="boarding">
+      <h3>Boarding Facilities</h3>
+      <p>We offer safe, nurturing and well-supervised boarding facilities for pupils from Grade 4 and above. Our boarding program fosters discipline, independence, and academic excellence in a homely environment.</p>
+      
+      <div class="boarding-details">
+        <div class="boarding-card">
+          <h4>Full Boarding</h4>
+          <p>Available for Grade 4 to Junior Secondary. Includes meals, dormitory, laundry, supervised study time, and weekend activities.</p>
+          <p><strong>Fee per Term:</strong> KES 45,000</p>
+        </div>
+    
+        <div class="boarding-card">
+          <h4>Weekly Boarding</h4>
+          <p>Drop off on Monday, pick up on Friday. Ideal for parents working full-time. Includes meals, dormitory, and weekday care.</p>
+          <p><strong>Fee per Term:</strong> KES 35,000</p>
+        </div>
+      </div>
+    </section>
+    
+  
+    <section class="section admission-box">
+      <h3>How to Apply</h3>
+      <ul>
+        <li>Visit the school physically or contact us through phone/email</li>
+        <li>Collect or download the admission form</li>
+        <li>Submit completed form with required documents</li>
+        <li>Interview and/or placement assessment (if necessary)</li>
+        <li>Receive admission letter and prepare for school start</li>
+      </ul>
+      <a href="images/document.pdf" target="_blank" class="admissions-btn">Download Admission Form</a>
+    </section>
+  
+    <section class="section admission-box">
+      <h3>School Fees & Payment</h3>
+      <p>Our school offers quality education at affordable fees. Payments can be made via MPesa, bank transfer, or cash at the office.</p>
+      <ul>
+        <li>Paybill: 123456</li>
+        <li>Account Number: Student's Name</li>
+        <li>Bank: KCB, Account No: 987654321</li>
+      </ul>
+    </section>
+  
+    <section class="section admission-box">
+      <h3>Academic Calendar</h3>
+      <p>We follow the Ministry of Education’s term calendar. Below are the typical term dates:</p>
+      <ul>
+        <li>Term 1: January – April</li>
+        <li>Term 2: May – August</li>
+        <li>Term 3: September – November</li>
+      </ul>
+    </section>
+  </main>
+  
+  
 
 <a
   href="https://wa.me/254732625092"
